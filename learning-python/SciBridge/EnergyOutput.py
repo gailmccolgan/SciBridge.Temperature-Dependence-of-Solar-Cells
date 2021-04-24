@@ -15,13 +15,16 @@ lbl.grid(column=0, row=1, sticky=W, columnspan=6)
 lbl2 = Label(root, text="A standard rooftop solar panel has an energy output of approximately 250 watts per hour.")
 lbl2.grid(column=0, row=2, sticky=W, columnspan=6)
 
+lblspace = Label(root, text=" ").grid(column=7, row=1)
+lblspace2 = Label(root, text=" ").grid(column=8, row=1)
+
 # picture
 image = Image.open("house.png.png")
 image = image.resize((350, 250), Image.ANTIALIAS)
 img = ImageTk.PhotoImage(image)
-canvas = Canvas(root, width=300, heigh=300)
+canvas = Canvas(root, width=350, heigh=400)
 canvas.image = img
-canvas.grid(column=9, row=1, rowspan=10)
+canvas.grid(column=11, row=1, rowspan=15)
 canvas.create_image(1, 1, anchor=NW, image=img)
 
 # more introductory information
@@ -183,74 +186,74 @@ def calculate():
     if totalwatt <= 1625:
         hrs1 = totalwatt/6.5/1
         hours1 = '{:.2f}'.format(hrs1)
-        lbl21 = Label(root, text="For 1 solar panel you need to use it for " + hours1 + "each.")
-        lbl21.grid(column=8, row=14, sticky=W, columnspan=6)
+        lbl21 = Label(root, text="For 1 solar panel you need to use it for " + hours1 + " hours each.")
+        lbl21.grid(column=10, row=14, sticky=W, columnspan=6)
     else:
         lbl21 = Label(root, text=" ")
-        lbl21.grid(column=8, row=14, sticky=W, columnspan=6)
+        lbl21.grid(column=10, row=14, sticky=W, columnspan=6)
 
     if totalwatt <= 3250:
         hrs2 = totalwatt/6.5/2
         hours2 = '{:.2f}'.format(hrs2)
-        lbl22 = Label(root, text="For 2 solar panels you need to use them for " + hours2 + "each.")
-        lbl22.grid(column=8, row=15, sticky=W, columnspan=6)
+        lbl22 = Label(root, text="For 2 solar panels you need to use them for " + hours2 + " hours each.")
+        lbl22.grid(column=10, row=15, sticky=W, columnspan=6)
     else:
         lbl22 = Label(root, text=" ")
-        lbl22.grid(column=8, row=15, sticky=W, columnspan=6)
+        lbl22.grid(column=10, row=15, sticky=W, columnspan=6)
 
     if totalwatt <= 4875:
         hrs3 = totalwatt/6.5/3
         hours3 = '{:.2f}'.format(hrs3)
-        lbl23 = Label(root, text="For 3 solar panels you need to use them for " + hours3 + "each.")
-        lbl23.grid(column=8, row=16, sticky=W, columnspan=6)
+        lbl23 = Label(root, text="For 3 solar panels you need to use them for " + hours3 + " hours each.")
+        lbl23.grid(column=10, row=16, sticky=W, columnspan=6)
     else:
         lbl23 = Label(root, text=" ")
-        lbl23.grid(column=8, row=16, sticky=W, columnspan=6)
+        lbl23.grid(column=10, row=16, sticky=W, columnspan=6)
 
     if totalwatt <= 6500:
         hrs4 = totalwatt/6.5/4
         hours4 = '{:.2f}'.format(hrs4)
-        lbl24 = Label(root, text="For 4 solar panels you need to use them for " + hours4 + "each.")
-        lbl24.grid(column=8, row=17, sticky=W, columnspan=6)
+        lbl24 = Label(root, text="For 4 solar panels you need to use them for " + hours4 + " hours each.")
+        lbl24.grid(column=10, row=17, sticky=W, columnspan=6)
     else:
         lbl24 = Label(root, text=" ")
-        lbl24.grid(column=8, row=17, sticky=W, columnspan=6)
+        lbl24.grid(column=10, row=17, sticky=W, columnspan=6)
 
     if totalwatt <= 8125:
         hrs5 = totalwatt/6.5/5
         hours5 = '{:.2f}'.format(hrs5)
-        lbl25 = Label(root, text="For 5 solar panels you need to use them for " + hours5 + "each.")
-        lbl25.grid(column=8, row=18, sticky=W, columnspan=6)
+        lbl25 = Label(root, text="For 5 solar panels you need to use them for " + hours5 + " hours each.")
+        lbl25.grid(column=10, row=18, sticky=W, columnspan=6)
     else:
         lbl25 = Label(root, text=" ")
-        lbl25.grid(column=8, row=18, sticky=W, columnspan=6)
+        lbl25.grid(column=10, row=18, sticky=W, columnspan=6)
 
     if totalwatt <= 9750:
         hrs6 = totalwatt/6.5/6
         hours6 = '{:.2f}'.format(hrs6)
-        lbl26 = Label(root, text="For 6 solar panels you need to use them for " + hours6 + "each.")
-        lbl26.grid(column=8, row=19, sticky=W, columnspan=6)
+        lbl26 = Label(root, text="For 6 solar panels you need to use them for " + hours6 + " hours each.")
+        lbl26.grid(column=10, row=19, sticky=W, columnspan=6)
     else:
         lbl26 = Label(root, text=" ")
-        lbl26.grid(column=8, row=19, sticky=W, columnspan=6)
+        lbl26.grid(column=10, row=19, sticky=W, columnspan=6)
 
     if totalwatt <= 11375:
         hrs7 = totalwatt/6.5/7
         hours7 = '{:.2f}'.format(hrs7)
-        lbl27 = Label(root, text="For 7 solar panels you need to use them for " + hours7 + "each.")
-        lbl27.grid(column=8, row=20, sticky=W, columnspan=6)
+        lbl27 = Label(root, text="For 7 solar panels you need to use them for " + hours7 + " hours each.")
+        lbl27.grid(column=10, row=20, sticky=W, columnspan=6)
     else:
         lbl27 = Label(root, text=" ")
-        lbl27.grid(column=8, row=20, sticky=W, columnspan=6)
+        lbl27.grid(column=10, row=20, sticky=W, columnspan=6)
 
     if totalwatt <= 13000:
         hrs8 = totalwatt/6.5/8
         hours8 = '{:.2f}'.format(hrs8)
-        lbl28 = Label(root, text="For 8 solar panels you need to use them for " + hours8 + "each.")
-        lbl28.grid(column=8, row=21, sticky=W, columnspan=6)
+        lbl28 = Label(root, text="For 8 solar panels you need to use them for " + hours8 + " hours each.")
+        lbl28.grid(column=10, row=21, sticky=W, columnspan=6)
     else:
         lbl28 = Label(root, text="You do not have enough solar panels or peak light hours for this amount of power")
-        lbl28.grid(column=8, row=21, sticky=W, columnspan=6)
+        lbl28.grid(column=10, row=21, sticky=W, columnspan=6)
 
 # runs the entire calculate function and displays it on the screen
 btn2 = Button(root, text="Submit", fg="red", command=calculate).grid(column=0, row=23)
